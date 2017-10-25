@@ -5,14 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.MenuItem
-import com.yixun.sdk.demo.ui.fragment.addFragment
-import com.yixun.sdk.demo.ui.fragment.getFragmentByTag
-import com.yixun.sdk.demo.ui.fragment.hideFragment
-import com.yixun.sdk.demo.ui.fragment.showFragment
 import com.yixun.sdk.demo.databinding.ActivityMainNewBinding
 import com.yixun.sdk.demo.R
 import com.yixun.sdk.demo.SDKDemoActivity
-import com.yixun.sdk.demo.ui.fragment.HomeFragment
+import com.yixun.sdk.demo.ui.fragment.*
 
 class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
     override fun getChildActivity(): Activity? = this
@@ -41,11 +37,11 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
     }
 
     private val fragmentTag = arrayOf(
-            HomeFragment::class.java.simpleName,
-            HomeFragment::class.java.simpleName,
-            HomeFragment::class.java.simpleName,
-            HomeFragment::class.java.simpleName,
-            HomeFragment::class.java.simpleName)
+            TestFragment::class.java.simpleName,
+            TestFragment::class.java.simpleName,
+            TestFragment::class.java.simpleName,
+            TestFragment::class.java.simpleName,
+            TestFragment::class.java.simpleName)
 
     fun setCurrentItem(index: Int){
        binding.bottomNavigationView.getBottomNavigationItemView(index).performClick()
@@ -60,9 +56,9 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
         if (showFragment == null) {
             showFragment = when (index) {
                 0 -> HomeFragment.newInstance("title")
-                1 -> HomeFragment.newInstance("title")
-                3 -> HomeFragment.newInstance("title")
-                4 -> HomeFragment.newInstance("title")
+                1 -> TestFragment.newInstance("title")
+                3 -> TestFragment.newInstance("title")
+                4 -> TestFragment.newInstance("title")
                 else -> null
             }
             addFragment(R.id.flContainer, showFragment!!, fragmentTag[index])
