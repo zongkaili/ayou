@@ -9,8 +9,8 @@
     <color name="color_gray">#e5e5e5</color>
     <color name="color_gray_dark">#777D7D7D</color>
 
-    <color name="colorPrimary">#FFB600</color>
-    <color name="colorPrimaryDark">#FF9100</color>
+    <color name="colorPrimary">#3CA3FE</color>
+    <color name="colorPrimaryDark">#3484FD</color>
     <!--Disable结尾的颜色，通常用于不可点击状态，颜色值为本色的33透明度-->
     <color name="colorPrimaryDisable">#33FFB600</color>
     <color name="colorPrimaryDarkDisable">#33FF9100</color>
