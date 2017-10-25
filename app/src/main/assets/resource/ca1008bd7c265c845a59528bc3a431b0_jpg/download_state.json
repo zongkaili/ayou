@@ -1,0 +1,39 @@
+{
+  "regular_resources": [
+    "9c6582e41ff19f925cea45487ceaf328_mp4",
+    "ac695bf4e6cf3df7e0e7914fd9399fe6_zip",
+    "c1e072e1d3969f35679978a48efa3522_png",
+    "be25220fff33624e3c82defc71941da1_png",
+    "ca1008bd7c265c845a59528bc3a431b0_jpg"
+  ],
+  "download_state": {
+    "c1e072e1d3969f35679978a48efa3522_png-240.png": {
+      "url": "http://yixun.arhieason.com/media01/c1e072e1d3969f35679978a48efa3522_png-240.png",
+      "download_state": "success"
+    },
+    "ac695bf4e6cf3df7e0e7914fd9399fe6_zip-iosv5.unity3d": {
+      "url": "http://yixun.arhieason.com/media01/ac695bf4e6cf3df7e0e7914fd9399fe6_zip-iosv5.unity3d",
+      "download_state": "success"
+    },
+    "ca1008bd7c265c845a59528bc3a431b0_jpg-240.jpg": {
+      "url": "http://yixun.arhieason.com/media01/ca1008bd7c265c845a59528bc3a431b0_jpg-240.jpg",
+      "download_state": "success"
+    },
+    "be25220fff33624e3c82defc71941da1_png-240.png": {
+      "url": "http://yixun.arhieason.com/media01/be25220fff33624e3c82defc71941da1_png-240.png",
+      "download_state": "success"
+    },
+    "ca1008bd7c265c845a59528bc3a431b0_jpg.dat": {
+      "url": "yixun.arhieason.com/media01/b63d85bd02d4a613f3dd82749a53a392_zip-full.zip",
+      "download_state": "success"
+    },
+    "9c6582e41ff19f925cea45487ceaf328_mp4-full.mp4": {
+      "url": "http://yixun.arhieason.com/media01/9c6582e41ff19f925cea45487ceaf328_mp4-full.mp4",
+      "download_state": "success"
+    },
+    "ac695bf4e6cf3df7e0e7914fd9399fe6_zip-androidv5.unity3d": {
+      "url": "http://yixun.arhieason.com/media01/ac695bf4e6cf3df7e0e7914fd9399fe6_zip-androidv5.unity3d",
+      "download_state": "success"
+    }
+  }
+}

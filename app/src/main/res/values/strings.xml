@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IdealseeSDK-Demo</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="start_scan">开始</string>
+    <string name="stop_scan">结束</string>
+    <string name="discover_page">发现</string>
+    <string name="btn_close_down">关闭</string>
+    <string name="pre_page">上页</string>
+    <string name="next_page">下页</string>
+
+    <string name="frag_list_no_content">there is no content</string>
+    <string name="discover_close">返回</string>
+
+    <string name="activity_in_right">right in</string>
+    <string name="activity_in_bottom">bottom in</string>
+    <string name="activity_title">user viewcontroller</string>
+    <string name="activity_content">user ui</string>
+
+    <string name="tv_menu_toast">路径类</string>
+    <string name="tv_menu_scan">扫描类</string>
+    <string name="tv_menu_camera">相机类</string>
+    <string name="tv_menu_theme">主题类</string>
+
+    <string name="tv_list_recognize_time_online">在线识别时间：%1$s</string>
+    <string name="tv_list_recognize_time_offline">离线识别时间：%1$s</string>
+    <string name="tv_list_recognize_time_local">本地识别时间：%1$s</string>
+
+    <string name="tv_support_toast_register">注册</string>
+    <string name="tv_support_toast_capture">截图</string>
+    <string name="tv_support_toast_theme_image">主题图</string>
+    <string name="tv_support_toast_update_image">识别图</string>
+
+    <string name="tv_support_scan_effect">扫描特效%1$s</string>
+    <string name="tv_support_scan_sound">扫描声音%1$s</string>
+    <string name="tv_support_scan_ar_match">AR叠加%1$s</string>
+
+    <string name="tv_support_camera_focus">对焦</string>
+    <string name="tv_support_camera_flash">闪光灯%1$s</string>
+    <string name="tv_support_camera_camera">摄像头%1$s</string>
+    <string name="tv_support_camera_switch">切换</string>
+
+    <string name="tv_support_theme_move">支持移动%1$s</string>
+    <string name="tv_support_theme_scale">支持缩放%1$s</string>
+    <string name="tv_support_theme_rotate">支持旋转%1$s</string>
+    <string name="tv_support_theme_reset">重置姿态</string>
+    <string name="tv_support_theme_gyroscope">自由模式%1$s</string>
+    <string name="tv_support_open">开</string>
+    <string name="tv_support_close">关</string>
+
+    <string name="weather_error_position">无法获取位置信息……</string>
+
+    <!-- webview -->
+    <string name="webview_refresh">刷新</string>
+    <string name="webview_open_with_browser">在浏览器中打开</string>
+</resources>

@@ -1,0 +1,241 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="android:windowBackground">@drawable/bg_start_icon</item>-->
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <style name="AppStartTheme" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="theme_notitlebar" parent="android:Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--无标题，statusbar的图标为黑色，这个没有效果，写出来是为了统一高版本的style文件-->
+    <style name="AppTheme.NoActionBar.Light" parent="AppTheme.NoActionBar" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="set_divide_row1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:background">#4D000000</item>
+    </style>
+
+    <style name="set_divide_row2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#f2f2f2</item>
+    </style>
+
+    <style name="random_item_divide_row_1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">#18000000</item>
+    </style>
+
+    <style name="random_item_divide_row_2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">#18FFFFFF</item>
+    </style>
+
+    <style name="rl_relate_color_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/common_act_title_height</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@drawable/bg_titlebar</item>
+    </style>
+
+
+    <style name="rl_relate_white_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/common_act_title_height</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="discover_list_top_list_item">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="loading_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowBackground">@color/transparent</item> <!-- 设置dialog的背景 -->
+        <item name="android:windowNoTitle">true</item> <!-- 是否显示title -->
+        <item name="android:windowIsTranslucent">true</item> <!-- 是否半透明 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowContentOverlay">@null
+        </item> <!-- 也是个drawable，定义contentoverlay的背景 -->
+        <item name="android:backgroundDimEnabled">false</item> <!-- 背景是否模糊显示 -->
+    </style>
+
+    <style name="loading_dialog1" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowBackground">@color/transparent</item> <!-- 设置dialog的背景 -->
+        <item name="android:windowNoTitle">true</item> <!-- 是否显示title -->
+        <item name="android:windowIsTranslucent">true</item> <!-- 是否半透明 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowContentOverlay">@null
+        </item> <!-- 也是个drawable，定义contentoverlay的背景 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 背景是否模糊显示 -->
+    </style>
+
+    <style name="game_dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="CustomDialog_fill" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <!-- 分享界面的全屏dialog样式 -->
+    <style name="DialogThemeFullScreen" parent="android:Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item> <!-- 是否浮现在activity之上 -->
+    </style>
+
+    <style name="translateFullScreenDialog" parent="android:Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="style_alert_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <!-- chat page end -->
+
+    <!--titleBar样式-->
+    <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionBarItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="selectableItemBackground">@drawable/toolbarItemBackground</item>
+        <item name="titleTextAppearance">@style/ToolBar.Title</item>
+        <item name="subtitleTextAppearance">@style/Toolbar.SubTitle</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:textSize">18sp</item> &lt;!&ndash;  搞掂字体大小&ndash;&gt;-->
+    </style>
+
+    <!--titlebar 标题-->
+    <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <!--titlebar 副标题-->
+    <style name="Toolbar.SubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">9.0sp</item>
+        <item name="android:textColor">#99ffffff</item>
+    </style>
+
+    <style name="text_menu">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_operator">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

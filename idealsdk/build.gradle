@@ -1,0 +1,138 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.setup.compileSdk
+    buildToolsVersion rootProject.setup.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.setup.minSdk
+        targetSdkVersion rootProject.setup.targetSdk
+        versionCode rootProject.setup.vcode
+        versionName rootProject.setup.vname
+
+        ndk {
+            moduleName "ISARNatvieModel"
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path "src/main/jni/Android.mk"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/libs']
+            jni.srcDirs = []
+        }
+    }
+
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libAugmentedReality.so'
+        pickFirst 'lib/armeabi-v7a/libISARNatvieModel.so'
+        pickFirst 'lib/armeabi-v7a/libmain.so'
+        pickFirst 'lib/armeabi-v7a/libmono.so'
+        pickFirst 'lib/armeabi-v7a/libunity.so'
+    }
+}
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'aars'
+        }
+    }
+}
+
+def zipFile = file('build/intermediates/bundles/release/class-format.jar')
+/*task makeJar(type: Jar, dependsOn: "build") {
+    from zipTree(zipFile)
+    from fileTree(dir: 'src/main')
+    destinationDir = file(sdkDestinationPath)
+}*/
+
+//dependsOn 可根据实际需要增加或更改
+task buildJar(dependsOn: ['compileReleaseJavaWithJavac'], type: Jar) {
+    appendix = "demo"
+    baseName = "androidJar"
+    version = "1.4.2"
+    classifier = "release"
+    //后缀名
+    extension = "jar"
+    //最终的 Jar 包名，如果没设置，默认为 [baseName]-[appendix]-[version]-[classifier].[extension]
+    archiveName = "AndroidJarDemo.jar"
+    //需打包的资源所在的路径集
+    def srcClassDir = [project.buildDir.absolutePath + "/intermediates/classes/release"];
+    //初始化资源路径集
+    from srcClassDir
+    //去除路径集下部分的资源
+//    exclude "org/chaos/demo/jar/MainActivity.class"
+//    exclude "org/chaos/demo/jar/MainActivity\$*.class"
+    exclude "com/idealsee/sdk/BuildConfig.class"
+    exclude "com/idealsee/sdk/BuildConfig\$*.class"
+    exclude "android/**/*.class"
+    exclude "android/**/\$*.class"
+    exclude "**/R.class"
+    exclude "**/R\$*.class"
+    //只导入资源路径集下的部分资源
+    include "com/idealsee/**/*.class"
+    //注: exclude include 支持可变长参数
+}
+
+//task proguardJar(type: proguard.gradle.ProGuardTask, dependsOn: "buildJar") {
+//    // 未混淆的jar
+//    //injars 'build/intermediates/bundles/release/classes.jar'
+//    String inJar = buildJar.archivePath.getAbsolutePath()
+//    injars inJar
+//    // 混淆后的jar路径
+//    outjars inJar.substring(0, inJar.lastIndexOf('/')) + '/idealsdk-release.jar'
+//    // 设置不删除未引用的资源(类，方法等)
+//    dontshrink
+//    // 具体需要keep住的类
+//    configuration 'proguard-rules.pro'
+//}
+
+task ndkBuild(type: Exec) {
+    commandLine 'ndk-build.cmd', "-C", file('src/main/jni')
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn ndkBuild
+}
+
+//apply from: 'fat-aar.gradle'
+
+dependencies {
+    compile "com.android.support:appcompat-v7:$rootProject.versions.libSupport"
+    compile "com.android.support:design:$rootProject.versions.libSupport"
+
+    compile files('libs/android-support-v8-renderscript.jar')
+    compile files('libs/unity-classes.jar')
+    compile(name: 'exoplayer-r1.5.14', ext: 'aar')
+
+//    embedded files('libs/android-support-v8-renderscript.jar')
+//    embedded files('libs/unity-classes.jar')
+//    embedded(name: 'exoplayer-r1.5.14', ext: 'aar')
+}

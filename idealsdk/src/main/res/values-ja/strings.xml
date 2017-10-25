@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IdealseeSDK-AR</string>
+    <!-- WaterFall -->
+    <string name="water_fall_header_hint_normal">引き下げて更新</string>
+    <string name="water_fall_header_hint_ready">放して更新</string>
+    <string name="water_fall_header_last_time">前回更新時間:\n %1$s</string>
+    <string name="water_fall_footer_hint_normal">さらに更新</string>
+    <string name="water_fall_footer_hint_ready">さらに更新</string>
+    <string name="water_fall_header_search_tip">発見</string>
+    <string name="water_fall_header_search_cancel">取消</string>
+
+    <!-- Message -->
+    <string name="msg_sdcard_not_available">SDカード使用不可</string>
+    <string name="msg_network_not_available">ネットワーク未接続</string>
+    <string name="msg_app_will_crash">很抱歉,程序出现异常,即将退出</string>
+    <string name="msg_save_img_success">保存成功</string>
+    <string name="msg_save_img_faild">保存失敗</string>
+    <!-- PicturePagerActivity -->
+    <string name="view_picture_index">%1$s/%2$s</string>
+
+    <string name="tip_submit_success">提交成功</string>
+</resources>

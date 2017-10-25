@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_inc_ar_web_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_web_title"
+        style="@style/rl_relate_color_title"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_act_title_height">
+
+            <ImageView
+                android:id="@+id/iv_web_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_back_color_selector" />
+
+            <TextView
+                android:id="@+id/tv_web_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_web_back"
+                android:gravity="center"
+                android:text="@string/btn_close_down"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_web_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="40dp"
+                android:layout_toRightOf="@id/tv_web_close"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_web_more"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_title_more_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_web_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_web_title"
+        android:paddingTop="4dp" />
+
+    <ProgressBar
+        android:id="@+id/pb_web_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/rl_web_title"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/bg_web_progress" />
+
+</RelativeLayout>

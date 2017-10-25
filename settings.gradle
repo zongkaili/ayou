@@ -1,0 +1,2 @@
+include ':app',':idealsdk'
+//include ':app'

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IdealseeSDK-AR</string>
+    <!-- WaterFall -->
+    <string name="water_fall_header_hint_normal">下拉刷新</string>
+    <string name="water_fall_header_hint_ready">松开后刷新</string>
+    <string name="water_fall_header_last_time">上次更新时间:\n %1$s</string>
+    <string name="water_fall_footer_hint_normal">查看更多</string>
+    <string name="water_fall_footer_hint_ready">松开查看更多</string>
+    <string name="water_fall_header_search_tip">发现</string>
+    <string name="water_fall_header_search_cancel">取消</string>
+    <string name="btn_close_down">关闭</string>
+
+    <!-- Message -->
+    <string name="msg_sdcard_not_available">sdcard不可用, 请检查sd卡</string>
+    <string name="msg_network_not_available">无法连接到网络, 请检查网络连接</string>
+    <string name="msg_app_will_crash">很抱歉,程序出现异常,即将退出</string>
+    <string name="msg_save_img_success">保存到相册成功</string>
+    <string name="msg_save_img_faild">保存到相册失败</string>
+    <!-- PicturePagerActivity -->
+    <string name="view_picture_index">%1$s/%2$s</string>
+
+    <string name="tip_submit_success">提交成功</string>
+
+    <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
+    <string name="tips_not_wifi_confirm">Resume</string>
+    <string name="tips_not_wifi_cancel">Stop play</string>
+    <string name="no_url">No mUrl</string>
+</resources>

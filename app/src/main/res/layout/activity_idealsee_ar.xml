@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+    <FrameLayout
+        android:id="@+id/fl_home_tip_page"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent" />
+    <!-- <TextView
+        android:id="@+id/start_scan"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#80FFFF80"
+        android:gravity="center"
+        android:text="@string/start_scan" />
+
+    <TextView
+        android:id="@+id/stop_ar"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#80FF8080"
+        android:layout_below="@id/start_scan"
+        android:gravity="center"
+        android:text="@string/stop_ar" />
+    
+    <TextView
+        android:id="@+id/tv_discover"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#80FF8080"
+        android:layout_below="@id/stop_ar"
+        android:gravity="center"
+        android:text="@string/discover_page" /> -->
+</RelativeLayout>

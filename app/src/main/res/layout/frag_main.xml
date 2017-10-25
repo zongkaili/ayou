@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_rootview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000">
+
+    <TextView
+        android:id="@+id/start_scan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/gray_transparent"
+        android:gravity="center"
+        android:text="@string/start_scan"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_discover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/gray_transparent"
+        android:gravity="center"
+        android:text="@string/discover_page"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/gray_transparent"
+        android:gravity="center"
+        android:text="@string/next_page"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_pre"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/tv_next"
+        android:layout_alignTop="@+id/tv_next"
+        android:layout_toLeftOf="@+id/tv_next"
+        android:background="@color/gray_transparent"
+        android:gravity="center"
+        android:text="@string/pre_page"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <com.yixun.sdk.demo.widget.CharSlideMenu
+        android:id="@+id/csm_ar_page_number"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/test_menu_toast"
+            style="@style/text_menu"
+            android:text="@string/tv_menu_toast"/>
+
+        <TextView
+            android:id="@+id/test_menu_scan"
+            style="@style/text_menu"
+            android:layout_below="@id/test_menu_toast"
+            android:text="@string/tv_menu_scan"/>
+
+        <TextView
+            android:id="@+id/test_menu_camera"
+            style="@style/text_menu"
+            android:layout_below="@id/test_menu_scan"
+            android:text="@string/tv_menu_camera"/>
+
+        <TextView
+            android:id="@+id/test_menu_theme"
+            style="@style/text_menu"
+            android:layout_below="@id/test_menu_camera"
+            android:text="@string/tv_menu_theme"/>
+
+    </RelativeLayout>
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/list_recognize_time"
+       android:layout_width="wrap_content"
+       android:layout_height="150dp"
+       android:layout_alignParentLeft="true"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="30dp"
+       android:layout_below="@+id/rl_theme_menu"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_toast_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/test_register"
+            style="@style/text_operator"
+            android:text="@string/tv_support_toast_register"/>
+
+        <TextView
+            android:id="@+id/test_capture"
+            style="@style/text_operator"
+            android:layout_below="@id/test_register"
+            android:text="@string/tv_support_toast_capture"/>
+
+        <TextView
+            android:id="@+id/test_theme_image"
+            style="@style/text_operator"
+            android:layout_below="@id/test_capture"
+            android:text="@string/tv_support_toast_theme_image"/>
+
+        <TextView
+            android:id="@+id/test_update_image"
+            style="@style/text_operator"
+            android:layout_below="@id/test_theme_image"
+            android:text="@string/tv_support_toast_update_image"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_scan_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/test_effect"
+            style="@style/text_operator"
+            android:text="@string/tv_support_scan_effect"/>
+
+        <TextView
+            android:id="@+id/test_sound"
+            style="@style/text_operator"
+            android:layout_below="@id/test_effect"
+            android:text="@string/tv_support_scan_sound"/>
+
+        <TextView
+            android:id="@+id/test_ar_match"
+            style="@style/text_operator"
+            android:layout_below="@id/test_sound"
+            android:text="@string/tv_support_scan_ar_match"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_camera_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/test_focus"
+            style="@style/text_operator"
+            android:text="@string/tv_support_camera_focus"/>
+
+        <TextView
+            android:id="@+id/test_flash"
+            style="@style/text_operator"
+            android:layout_below="@id/test_focus"
+            android:text="@string/tv_support_camera_flash"/>
+
+        <TextView
+            android:id="@+id/test_camera"
+            style="@style/text_operator"
+            android:layout_below="@id/test_flash"
+            android:text="@string/tv_support_camera_camera"/>
+
+        <TextView
+            android:id="@+id/test_switch"
+            style="@style/text_operator"
+            android:layout_below="@id/test_camera"
+            android:text="@string/tv_support_camera_switch"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_model_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/test_move"
+            style="@style/text_operator"
+            android:text="@string/tv_support_theme_move"/>
+
+        <TextView
+            android:id="@+id/test_scale"
+            style="@style/text_operator"
+            android:layout_below="@id/test_move"
+            android:text="@string/tv_support_theme_scale"/>
+
+        <TextView
+            android:id="@+id/test_rotate"
+            style="@style/text_operator"
+            android:layout_below="@id/test_scale"
+            android:text="@string/tv_support_theme_rotate"/>
+
+        <TextView
+            android:id="@+id/test_center"
+            style="@style/text_operator"
+            android:layout_below="@id/test_rotate"
+            android:text="@string/tv_support_theme_reset"/>
+
+        <TextView
+            android:id="@+id/test_gyroscope"
+            style="@style/text_operator"
+            android:layout_below="@id/test_center"
+            android:text="@string/tv_support_theme_gyroscope"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/inc_frag_ar_web_view"
+        layout="@layout/inc_ar_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

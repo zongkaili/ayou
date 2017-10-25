@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gray_transparent">#D5D5D280</color>
+    <color name="default_set_bg">#1e1e20</color>
+    <color name="color_char_slide_select_bg">#FAB621</color>
+
+    <color name="color_white">#ffffffff</color>
+    <color name="color_gray">#e5e5e5</color>
+    <color name="color_gray_dark">#777D7D7D</color>
+
+    <color name="colorPrimary">#FFB600</color>
+    <color name="colorPrimaryDark">#FF9100</color>
+    <!--Disable结尾的颜色，通常用于不可点击状态，颜色值为本色的33透明度-->
+    <color name="colorPrimaryDisable">#33FFB600</color>
+    <color name="colorPrimaryDarkDisable">#33FF9100</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_half">#302D2A</color>
+    <color name="bg_gray_light">#F6F8F7</color>
+    <color name="bg_gray_medium">#F7F9F8</color>
+    <color name="bg_gray_dark">#A9A9A9</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#96000000</color>
+    <color name="transparent_half_white">#d8ffffff</color>
+    <color name="eighty_per_black">#CD000000</color>
+    <color name="blue_light">#42E1FE</color>
+    <color name="blue_medium">#3CA3FE</color>
+    <color name="blue_dark">#3484FD</color>
+    <color name="orange">#FD8441</color>
+    <color name="orange_light">#F6C164</color>
+    <color name="tab_unselect">#c9c9c9</color>
+    <color name="bg_btn">#dadada</color>
+
+    <color name="btn_normal">#00000000</color>
+    <color name="btn_pressed">#0CF76B1E</color>
+    <color name="bg_red_color">#FB5553</color>
+    <color name="bg_red_color_pressed">#FFEEF0</color>
+    <!--将text_black设置为333333，更符合效果图-->
+    <color name="text_black">#333333</color>
+    <color name="text_gray">#a9a9a9</color>
+    <color name="text_gray_light">#CFCFCF</color>
+    <color name="text_blue">#3CA3FE</color>
+    <color name="text_red">#FF6C03</color>
+    <color name="text_orange">#FD8441</color>
+
+</resources>

@@ -1,0 +1,34 @@
+{
+  "regular_resources": [
+    "04a072d8bdfb2f62ed35c7ab30c5a2e2_mp3",
+    "d9aac3dca7d5d667c4819328d68e4488_zip",
+    "eb2d1cec8e481eb8178a8cbd929ea8e1_gif",
+    "51192218c36d3bda30e8909e0ecabc75_jpg"
+  ],
+  "download_state": {
+    "51192218c36d3bda30e8909e0ecabc75_jpg-240.jpg": {
+      "url": "http://yixun.arhieason.com/media01/51192218c36d3bda30e8909e0ecabc75_jpg-240.jpg",
+      "download_state": "success"
+    },
+    "eb2d1cec8e481eb8178a8cbd929ea8e1_gif-full.gif": {
+      "url": "http://yixun.arhieason.com/media01/eb2d1cec8e481eb8178a8cbd929ea8e1_gif-full.gif",
+      "download_state": "success"
+    },
+    "51192218c36d3bda30e8909e0ecabc75_jpg.dat": {
+      "url": "yixun.arhieason.com/media01/908821d45dd4e3504bc462d57afbd520_zip-full.zip",
+      "download_state": "success"
+    },
+    "d9aac3dca7d5d667c4819328d68e4488_zip-iosv5.unity3d": {
+      "url": "http://yixun.arhieason.com/media01/d9aac3dca7d5d667c4819328d68e4488_zip-iosv5.unity3d",
+      "download_state": "success"
+    },
+    "d9aac3dca7d5d667c4819328d68e4488_zip-androidv5.unity3d": {
+      "url": "http://yixun.arhieason.com/media01/d9aac3dca7d5d667c4819328d68e4488_zip-androidv5.unity3d",
+      "download_state": "success"
+    },
+    "04a072d8bdfb2f62ed35c7ab30c5a2e2_mp3-full.mp3": {
+      "url": "http://yixun.arhieason.com/media01/04a072d8bdfb2f62ed35c7ab30c5a2e2_mp3-full.mp3",
+      "download_state": "success"
+    }
+  }
+}

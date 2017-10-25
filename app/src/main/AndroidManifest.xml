@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yixun.sdk.demo">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme">
+        <meta-data
+            android:name="com.yixun.isarsdk.app_id"
+            android:value="5716fa795372a100055c1941" /><!--58be22a2b5eb0f00053d566b-->
+        <meta-data
+            android:name="com.yixun.isarsdk.app_key"
+            android:value="cd22ac4c357b9b1d0cacfa542f3c5638" /><!--8b8e01b13d4f5dab6a84d82a727a8dd0-->
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar.Light"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yixun.sdk.demo.DemoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".SDKDemoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.yixun.sdk.demo.widget.webview.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity
+            android:name=".SDKDemoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SDKLoadTheme"
+            android:launchMode="singleTask"
+            android:process=":myunityprocess">
+        </activity>-->
+        <activity
+            android:name="com.yixun.sdk.activity.ISARPicturePagerActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

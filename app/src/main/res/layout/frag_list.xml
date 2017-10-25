@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+    <TextView
+        android:id="@+id/tv_close_list"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="left|center_vertical"
+        android:background="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:textColor="#FF0000"
+        android:drawableLeft="@drawable/btn_back_pressed"
+        android:text="@string/discover_close" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/demo_swiperefreshlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tv_close_list"
+        android:scrollbars="vertical" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recyclerview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_shared_bottom_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#FFFFFFFF"
+        android:text="@string/frag_list_no_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

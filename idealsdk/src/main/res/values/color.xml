@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="eighty_per_black">#CD000000</color>
+    <color name="color_line">#CCCCCC</color>
+    <color name="btn_pressed">#0CF76B1E</color>
+</resources>

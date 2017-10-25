@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/activity_title" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/activity_content" />
+
+    <Button
+        android:id="@+id/btn_activity_in_right"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/activity_in_right" />
+    
+    <Button
+        android:id="@+id/btn_activity_in_bottom"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/btn_activity_in_right"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/activity_in_bottom" />
+</RelativeLayout>
