@@ -60,4 +60,11 @@
         <item>景点介绍</item>
         <item>AR导游服务</item>
     </string-array>
+
+    <string name="string_my_coupon">我的卡券</string>
+    <string name="string_my_order">我的订单</string>
+    <string name="string_my_loc">我的位置</string>
+    <string name="string_my_msg">我的消息</string>
+    <string name="string_my_footprint">我的足迹</string>
+    <string name="string_my_invitation">我的邀请</string>
 </resources>

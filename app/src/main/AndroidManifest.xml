@@ -81,6 +81,10 @@
         <activity
             android:name=".ui.activity.ScenicDetailActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".ui.activity.MyOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

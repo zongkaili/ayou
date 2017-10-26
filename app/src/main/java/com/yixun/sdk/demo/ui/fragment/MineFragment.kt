@@ -1,13 +1,17 @@
 package com.yixun.sdk.demo.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.TextView
 import android.widget.Toast
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.yixun.chime.entity.BannerAd
 import com.yixun.chime.entity.viewbinder.HomeBannerViewBinder
 import com.yixun.sdk.demo.R
 import com.yixun.sdk.demo.databinding.FragmentMineBinding
+import com.yixun.sdk.demo.ui.activity.MyOrderActivity
+import com.yixun.sdk.demo.ui.activity.ScenicDetailActivity
 import me.drakeet.multitype.MultiTypeAdapter
 
 /**
@@ -34,6 +38,9 @@ class MineFragment : BaseBingingFragment<FragmentMineBinding>() {
     }
 
     private fun bindFeeds(mBinding: FragmentMineBinding) {
+        mBinding.root.findViewById<TextView>(R.id.tvOrder).setOnClickListener {
+            startActivity(Intent(context, MyOrderActivity::class.java))
+        }
     }
 
     private fun configRefresh() {
