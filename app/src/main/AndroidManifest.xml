@@ -73,6 +73,14 @@
         <activity
             android:name="com.yixun.sdk.activity.ISARPicturePagerActivity"
             android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.activity.ActDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".ui.activity.ScenicDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

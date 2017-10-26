@@ -48,9 +48,11 @@
     <!--无标题，statusbar的图标为黑色，这个没有效果，写出来是为了统一高版本的style文件-->
     <style name="AppTheme.NoActionBar.Light" parent="AppTheme.NoActionBar" />
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:background">@color/color_white</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="set_divide_row1">
         <item name="android:layout_width">fill_parent</item>

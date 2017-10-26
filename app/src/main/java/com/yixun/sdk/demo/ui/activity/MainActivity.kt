@@ -37,11 +37,11 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
     }
 
     private val fragmentTag = arrayOf(
+            HomeFragment::class.java.simpleName,
+            DiscoverFragment::class.java.simpleName,
             TestFragment::class.java.simpleName,
-            TestFragment::class.java.simpleName,
-            TestFragment::class.java.simpleName,
-            TestFragment::class.java.simpleName,
-            TestFragment::class.java.simpleName)
+            ActFragment::class.java.simpleName,
+            MineFragment::class.java.simpleName)
 
     fun setCurrentItem(index: Int){
        binding.bottomNavigationView.getBottomNavigationItemView(index).performClick()
@@ -56,9 +56,9 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
         if (showFragment == null) {
             showFragment = when (index) {
                 0 -> HomeFragment.newInstance("title")
-                1 -> TestFragment.newInstance("title")
-                3 -> TestFragment.newInstance("title")
-                4 -> TestFragment.newInstance("title")
+                1 -> DiscoverFragment.newInstance("title")
+                3 -> ActFragment.newInstance("title")
+                4 -> MineFragment.newInstance("title")
                 else -> null
             }
             addFragment(R.id.flContainer, showFragment!!, fragmentTag[index])

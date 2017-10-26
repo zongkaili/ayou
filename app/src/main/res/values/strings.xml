@@ -55,4 +55,9 @@
     <!-- webview -->
     <string name="webview_refresh">刷新</string>
     <string name="webview_open_with_browser">在浏览器中打开</string>
+
+    <string-array name="tab_scenic_detail_titles">
+        <item>景点介绍</item>
+        <item>AR导游服务</item>
+    </string-array>
 </resources>

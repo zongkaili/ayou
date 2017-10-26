@@ -19,6 +19,49 @@
                 android:id="@+id/homeBannerFeed"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+            
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_half_white">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pic_home_top_left"
+                    android:layout_margin="20dp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_home_avatar"
+                    android:layout_margin="20dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topBar"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent_half_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三先生正在使用故宫导游服务"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/icon_home_notification"
+                    android:drawablePadding="10dp"/>
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 
