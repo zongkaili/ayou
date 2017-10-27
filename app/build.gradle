@@ -57,6 +57,12 @@ android {
     dataBinding {
         enabled = true
     }
+
+//    repositories {
+//        flatDir {
+//            dirs 'libs'
+//        }
+//    }
 }
 
 kapt {
@@ -67,13 +73,15 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':idealsdk')
+//    compile(name: 'idealsdk', ext: 'aar')
+    compile project(':jiaozivideoplayer')
     //    compile(name: 'sdk_release', ext: 'aar')
     def dependencies = rootProject.ext.dependencies
-    implementation dependencies["appcompat-v7"]
+//    implementation dependencies["appcompat-v7"]
+//    implementation dependencies["design"]
+    implementation dependencies["fragmentation"]
     implementation dependencies["recyclerview-v7"]
     implementation dependencies["cardview-v7"]
-    implementation dependencies["design"]
-    implementation dependencies["fragmentation"]
     implementation dependencies["gson"]
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -90,5 +98,5 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
     annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
 
-//    implementation 'cn.jzvd:jiaozivideoplayer:6.1.0_preview'
+//    compile 'cn.jzvd:jiaozivideoplayer:6.1.0_preview'
 }

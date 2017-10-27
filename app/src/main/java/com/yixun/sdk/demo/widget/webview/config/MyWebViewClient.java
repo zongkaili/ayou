@@ -8,7 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.yixun.sdk.demo.widget.webview.WebViewActivity;
-import com.yixun.sdk.util.ISARNetUtil;
+import com.idealsee.sdk.util.ISARNetUtil;
 
 /**
  * 监听网页链接:

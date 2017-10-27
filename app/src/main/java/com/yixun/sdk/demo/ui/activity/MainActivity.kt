@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.MenuItem
+import android.view.View
 import com.yixun.sdk.demo.databinding.ActivityMainNewBinding
 import com.yixun.sdk.demo.R
 import com.yixun.sdk.demo.SDKDemoActivity
@@ -18,22 +18,43 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
     var tempTag: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.bottomNavigationView.enableAnimation(false)
-        binding.bottomNavigationView.enableItemShiftingMode(false)
-        binding.bottomNavigationView.enableShiftingMode(false)
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
-            val index = binding.bottomNavigationView.getMenuItemPosition(item)
-            changeFragment(index)
-            true
+        initBottomView(savedInstanceState)
+//        binding.bottomNavigationView.enableAnimation(false)
+//        binding.bottomNavigationView.enableItemShiftingMode(false)
+//        binding.bottomNavigationView.enableShiftingMode(false)
+//        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
+//            val index = binding.bottomNavigationView.getMenuItemPosition(item)
+//            changeFragment(index)
+//            true
+//        }
+//        changeFragment(if (savedInstanceState == null) 0
+//        else fragmentTag.indexOf(savedInstanceState.getString("tempTag", "page")))
+//        binding.fab.setOnClickListener {
+//            val intent = Intent(this, SDKDemoActivity::class.java)
+//            intent.putExtra("from_main", true)
+//            startActivity(intent)
+//            overridePendingTransition(R.anim.right_in, R.anim.left_out)
+//        }
+    }
+
+    private fun initBottomView(savedInstanceState: Bundle?) {
+        val listener = View.OnClickListener { view ->
+            if (view.id == binding.imgScan.id) {
+                val intent = Intent(this, SDKDemoActivity::class.java)
+                intent.putExtra("from_main", true)
+                startActivity(intent)
+                overridePendingTransition(R.anim.right_in, R.anim.left_out)
+                return@OnClickListener
+            }
+            changeFragment(binding.lnlTab.indexOfChild(view))
         }
+        binding.imgHome.setOnClickListener(listener)
+        binding.imgDiscover.setOnClickListener(listener)
+        binding.imgScan.setOnClickListener(listener)
+        binding.imgAct.setOnClickListener(listener)
+        binding.imgMine.setOnClickListener(listener)
         changeFragment(if (savedInstanceState == null) 0
-        else fragmentTag.indexOf(savedInstanceState.getString("tempTag", "page")))
-        binding.fab.setOnClickListener {
-            val intent = Intent(this, SDKDemoActivity::class.java)
-            intent.putExtra("from_main", true)
-            startActivity(intent)
-            overridePendingTransition(R.anim.right_in, R.anim.left_out)
-        }
+        else fragmentTag.indexOf(savedInstanceState.getString("tempTag", HomeFragment.TAG)))
     }
 
     private val fragmentTag = arrayOf(
@@ -43,11 +64,8 @@ class MainActivity : BaseBindingActivity<ActivityMainNewBinding>() {
             ActFragment::class.java.simpleName,
             MineFragment::class.java.simpleName)
 
-    fun setCurrentItem(index: Int){
-       binding.bottomNavigationView.getBottomNavigationItemView(index).performClick()
-    }
-
     private fun changeFragment(index: Int) {
+        binding.index = index
         if (index == 2) return
         val tempFragment = getFragmentByTag(tempTag)
         var showFragment: Fragment?

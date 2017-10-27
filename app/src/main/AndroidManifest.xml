@@ -71,8 +71,8 @@
             android:process=":myunityprocess">
         </activity>-->
         <activity
-            android:name="com.yixun.sdk.activity.ISARPicturePagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:name="com.idealsee.sdk.activity.ISARPicturePagerActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.activity.ActDetailActivity"
@@ -80,7 +80,9 @@
 
         <activity
             android:name=".ui.activity.ScenicDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".ui.activity.MyOrderActivity"

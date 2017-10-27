@@ -20,7 +20,7 @@ import org.m4m.domain.Frame;
 import org.m4m.domain.ICommandHandler;
 import org.m4m.domain.IInput;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 class SkipOutputFormatChangeCommandHandler implements ICommandHandler {
 	private static final String TAG = "EncoderSkipOutputFormatCh";

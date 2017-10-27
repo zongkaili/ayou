@@ -12,7 +12,7 @@ ext {
 
     dependVersion = [
             kotlin       : "1.1.4-3",
-            support      : "25.3.1",
+            support      : "26.1.0",
             retrofit     : "2.3.0",
             okhttp       : "3.6.0",
             dagger2      : "2.0.2",

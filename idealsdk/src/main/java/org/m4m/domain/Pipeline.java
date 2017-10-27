@@ -20,7 +20,7 @@ import org.m4m.AudioFormat;
 import org.m4m.domain.pipeline.ConnectorFactory;
 import org.m4m.domain.pipeline.IOnStopListener;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 import java.io.Closeable;
 import java.io.IOException;

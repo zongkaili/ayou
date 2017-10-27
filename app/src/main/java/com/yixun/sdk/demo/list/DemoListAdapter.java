@@ -20,11 +20,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yixun.sdk.demo.R;
-import com.yixun.sdk.model.ISARRandomInfo;
-import com.yixun.sdk.util.ISARBitmapLoader;
-import com.yixun.sdk.util.ISARDensityUtil;
-import com.yixun.sdk.util.Logger;
-import com.yixun.sdk.util.ISARStringUtil;
+import com.idealsee.sdk.model.ISARRandomInfo;
+import com.idealsee.sdk.util.ISARBitmapLoader;
+import com.idealsee.sdk.util.ISARDensityUtil;
+import com.idealsee.sdk.util.Logger;
+import com.idealsee.sdk.util.ISARStringUtil;
 
 public class DemoListAdapter extends RecyclerView.Adapter<ViewHolder> {
     private static final String TAG = "DemoListAdapter";

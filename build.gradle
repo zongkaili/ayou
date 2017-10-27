@@ -10,7 +10,7 @@ ext {
     ]
 
     versions = [
-            libSupport: "25.3.1"
+            libSupport: "26.1.0"
     ]
 }
 
@@ -22,7 +22,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-rc1'
+        classpath 'com.android.tools.build:gradle:3.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.50"
         classpath "io.realm:realm-gradle-plugin:3.1.1"
         classpath 'me.tatarka:gradle-retrolambda:3.6.1'

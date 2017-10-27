@@ -1,7 +1,7 @@
 package com.yixun.sdk.demo.utils;
 
-import com.yixun.sdk.util.ISARManager;
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.ISARManager;
+import com.idealsee.sdk.util.Logger;
 
 import java.io.File;
 import java.util.ArrayList;

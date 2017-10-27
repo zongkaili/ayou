@@ -23,7 +23,7 @@ import org.m4m.domain.ICommandHandler;
 import org.m4m.domain.IOutput;
 import org.m4m.domain.Render;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 
 class PushNewDataCommandHandler implements ICommandHandler {

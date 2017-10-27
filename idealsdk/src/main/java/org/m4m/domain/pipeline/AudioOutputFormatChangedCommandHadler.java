@@ -21,7 +21,7 @@ import org.m4m.domain.ICommandHandler;
 import org.m4m.domain.MediaCodecPlugin;
 import org.m4m.domain.MediaFormat;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 class AudioPipelineOutputFormatChangeCommandHandler implements ICommandHandler {
     private MediaCodecPlugin output;

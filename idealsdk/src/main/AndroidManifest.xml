@@ -20,12 +20,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
         <activity
-            android:name="com.yixun.sdk.activity.ISARPicturePagerActivity"
+            android:name="com.yixun.sdk.com.idelasee.sdk.activity.ISARPicturePagerActivity"
             android:screenOrientation="portrait" >
         </activity>
 
         <activity
-            android:name="com.yixun.sdk.activity.ISARVideoPlayerActivity"
+            android:name="com.yixun.sdk.com.idelasee.sdk.activity.ISARVideoPlayerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Transparent">

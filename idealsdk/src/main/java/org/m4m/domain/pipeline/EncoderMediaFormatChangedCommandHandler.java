@@ -20,7 +20,7 @@ import org.m4m.domain.ICommandHandler;
 import org.m4m.domain.Plugin;
 import org.m4m.domain.Render;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 class EncoderMediaFormatChangedCommandHandler implements ICommandHandler {
 	private static final String TAG = "EncoderMediaFormatChange";

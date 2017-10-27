@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public abstract class MediaCodecPlugin extends Plugin {
 	private static final String TAG = "MediaCodecPlugin";

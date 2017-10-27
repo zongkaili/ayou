@@ -27,7 +27,7 @@ import org.m4m.StreamingParameters;
 import org.m4m.VideoFormat;
 import org.m4m.domain.graphics.TextureRenderer;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 /**
  * Base class for different capturing pipelines exposed by library

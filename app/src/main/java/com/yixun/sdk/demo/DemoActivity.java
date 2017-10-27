@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.yixun.sdk.demo.utils.AssetsFileUtil;
-import com.yixun.sdk.util.ISARTipsUtil;
+import com.idealsee.sdk.util.ISARTipsUtil;
 
 import java.io.File;
 import java.io.IOException;

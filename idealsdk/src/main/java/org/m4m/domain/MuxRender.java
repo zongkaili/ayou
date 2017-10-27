@@ -26,7 +26,7 @@ import org.m4m.AudioFormat;
 import org.m4m.IProgressListener;
 import org.m4m.VideoFormat;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public class MuxRender extends Render {
 

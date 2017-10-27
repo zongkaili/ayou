@@ -14,8 +14,6 @@ import me.drakeet.multitype.MultiTypeAdapter
 * Created by zongkaili on 2017/9/21.
 */
 class ScenicDetailChildOneFragment : BaseBingingFragment<FragmentScenicDetailChildOneBinding>() {
-    private lateinit var mFeedAdapter: MultiTypeAdapter
-    private lateinit var items: ArrayList<Any>
 
     override fun onCreateView(mBinding: FragmentScenicDetailChildOneBinding, savedInstanceState: Bundle?) {
         initWidget()

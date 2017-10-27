@@ -25,7 +25,7 @@ import com.yixun.sdk.demo.R;
 import com.yixun.sdk.demo.SDKDemoActivity;
 import com.yixun.sdk.demo.list.DemoListAdapter.MyViewHolder;
 import com.yixun.sdk.demo.list.DemoListAdapter.OnItemClickLitener;
-import com.yixun.sdk.model.ISARRandomInfo;
+import com.idealsee.sdk.model.ISARRandomInfo;
 
 /**
  * @author hn This is tips layout for showing how to use it.

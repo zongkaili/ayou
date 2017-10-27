@@ -46,10 +46,10 @@ class TestFragment : BaseBingingFragment<FragmentTestBinding>() {
         mBinding.recyclerView.adapter = mFeedAdapter
         topBannerList = ArrayList<String>()
         items = ArrayList<Any>()
-        topBannerList = listOf("http://img1.gtimg.com/sports/pics/hv1/105/196/1592/103569885.jpg",
-                "http://img.weiot.net/portal/201604/14/041002yw70140k3wf89uwv.jpg",
-                "http://pic.qiantucdn.com/58pic/12/72/06/28n58PICBWj.jpg",
-                "http://olpic.tgbusdata.cn/uploads/oltgbuspic/20121010/new/1349830225_39bc7559.jpg")
+        topBannerList = listOf(
+                "http://b.hiphotos.baidu.com/image/pic/item/dcc451da81cb39dbbf279a97d9160924aa18300f.jpg",
+                "http://c.hiphotos.baidu.com/image/pic/item/cb8065380cd791232d6306b4a4345982b3b7806b.jpg",
+                "http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=c55331232c9759ee5e5d6888da922963/3c6d55fbb2fb4316a08b2f542aa4462309f7d30c.jpg")
         items.add(BannerAd(topBannerList))
         mFeedAdapter.items = items
         mFeedAdapter.notifyDataSetChanged()

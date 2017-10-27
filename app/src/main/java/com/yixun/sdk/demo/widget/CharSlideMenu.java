@@ -25,8 +25,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.yixun.sdk.demo.R;
-import com.yixun.sdk.util.ISARDensityUtil;
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.ISARDensityUtil;
+import com.idealsee.sdk.util.Logger;
 
 public class CharSlideMenu extends View {
     private static final String TAG = CharSlideMenu.class.getSimpleName();

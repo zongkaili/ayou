@@ -23,7 +23,7 @@ import org.m4m.domain.IFrameAllocator;
 import org.m4m.domain.IOutput;
 import org.m4m.domain.Plugin;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 class EofCommandHandler implements ICommandHandler {
     protected IOutput output;

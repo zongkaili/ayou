@@ -25,7 +25,7 @@ import org.m4m.domain.Frame;
 import org.m4m.domain.MediaFormat;
 import org.m4m.domain.MediaFormatType;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

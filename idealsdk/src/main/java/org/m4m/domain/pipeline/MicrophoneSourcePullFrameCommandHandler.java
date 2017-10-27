@@ -22,7 +22,7 @@ import org.m4m.domain.Frame;
 import org.m4m.domain.ICommandHandler;
 import org.m4m.domain.IMicrophoneSource;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 class MicrophoneSourcePullFrameCommandHandler implements ICommandHandler {
 	private static final String TAG = "MicrophoneSourcePullFrameCommandHandler";

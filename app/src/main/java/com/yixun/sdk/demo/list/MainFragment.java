@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.yixun.ar.unity.ISARUnityMessageManager;
+import com.idealsee.ar.unity.ISARUnityMessageManager;
 import com.yixun.sdk.demo.Constants;
 import com.yixun.sdk.demo.R;
 import com.yixun.sdk.demo.SDKDemoActivity;
@@ -25,8 +25,8 @@ import com.yixun.sdk.demo.utils.BtnUtils;
 import com.yixun.sdk.demo.utils.PreferenceUtil;
 import com.yixun.sdk.demo.widget.CharSlideMenu;
 import com.yixun.sdk.demo.widget.webview.WebViewActivity;
-import com.yixun.sdk.util.ISARTipsUtil;
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.ISARTipsUtil;
+import com.idealsee.sdk.util.Logger;
 
 import org.json.JSONException;
 import org.json.JSONObject;

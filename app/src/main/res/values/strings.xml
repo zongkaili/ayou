@@ -61,6 +61,14 @@
         <item>AR导游服务</item>
     </string-array>
 
+    <string-array name="tab_my_order_titles">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>未使用</item>
+        <item>已取消</item>
+        <item>已完成</item>
+    </string-array>
+
     <string name="string_my_coupon">我的卡券</string>
     <string name="string_my_order">我的订单</string>
     <string name="string_my_loc">我的位置</string>

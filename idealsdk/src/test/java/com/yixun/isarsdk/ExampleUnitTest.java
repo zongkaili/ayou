@@ -1,6 +1,6 @@
 package com.yixun.isarsdk;
 
-import com.yixun.sdk.util.ISARStringUtil;
+import com.idealsee.sdk.util.ISARStringUtil;
 
 import org.junit.Test;
 

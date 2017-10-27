@@ -19,7 +19,7 @@ package org.m4m.domain;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public abstract class Encoder extends MediaCodecPlugin implements ITransform, ISurfaceCreator {
 	private static final String TAG = "Encoder";

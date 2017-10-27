@@ -39,24 +39,33 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <com.yixun.sdk.demo.widget.PageStatusLayout
-            android:id="@+id/pageStatusLayout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <com.scwang.smartrefresh.layout.SmartRefreshLayout
-                android:id="@+id/refreshLayout"
+            <com.youth.banner.Banner
+                android:id="@+id/bannerFeed"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="150dp"/>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:lineSpacingExtra="5dp" />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/white"
+                app:tabIndicatorColor="@color/colorPrimaryDark"
+                app:tabSelectedTextColor="@color/text_blue"
+                app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                app:tabTextColor="@color/text_black"/>
 
-            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-        </com.yixun.sdk.demo.widget.PageStatusLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
     </android.support.design.widget.CoordinatorLayout>
 </layout>

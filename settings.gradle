@@ -1,2 +1,1 @@
-include ':app',':idealsdk'
-//include ':app'
+include ':app', ':idealsdk', ':jiaozivideoplayer'

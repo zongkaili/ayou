@@ -18,7 +18,7 @@ package org.m4m.domain;
 
 import org.m4m.AudioFormat;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public class AudioEncoder extends Encoder {
 

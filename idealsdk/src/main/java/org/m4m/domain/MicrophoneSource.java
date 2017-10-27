@@ -18,7 +18,7 @@ package org.m4m.domain;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public class MicrophoneSource  implements  IMicrophoneSource{
     protected CommandQueue commandQueue = new CommandQueue();

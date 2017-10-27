@@ -33,7 +33,7 @@ import android.media.MediaCodecList;
 import android.opengl.EGLContext;
 import android.os.Build;
 
-import com.yixun.sdk.util.Logger;
+import com.idealsee.sdk.util.Logger;
 
 public class MediaCodecEncoderPlugin implements IMediaCodec {
     private static final String TAG = "MediaCodecEncoderPlugin";
