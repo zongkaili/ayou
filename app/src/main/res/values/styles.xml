@@ -53,6 +53,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/pic_start</item>
+    </style>
+
     <!--无标题，statusbar的图标为黑色，这个没有效果，写出来是为了统一高版本的style文件-->
     <style name="AppTheme.NoActionBar.Light" parent="AppTheme.NoActionBar" />
 

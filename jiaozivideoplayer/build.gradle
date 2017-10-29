@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
-
+    def base = rootProject.ext.base
+    compileSdkVersion base.compileSdkVersion
+    buildToolsVersion base.buildToolsVersion
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion base.minSdkVersion
+        targetSdkVersion base.targetSdkVersion
         versionCode 68
         versionName "6.1.0_preview"
     }
