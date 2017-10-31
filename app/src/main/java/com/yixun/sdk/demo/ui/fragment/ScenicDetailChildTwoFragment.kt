@@ -1,10 +1,12 @@
 package com.yixun.sdk.demo.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.yixun.sdk.demo.R
+import com.yixun.sdk.demo.SDKDemoActivity
 import com.yixun.sdk.demo.databinding.FragmentScenicDetailChildOneBinding
 import com.yixun.sdk.demo.databinding.FragmentScenicDetailChildTwoBinding
 import me.drakeet.multitype.MultiTypeAdapter
@@ -46,6 +48,12 @@ class ScenicDetailChildTwoFragment : BaseBingingFragment<FragmentScenicDetailChi
     }
 
     private fun bindFeeds(mBinding: FragmentScenicDetailChildTwoBinding) {
+        mBinding.btnAr.setOnClickListener {
+            val intent = Intent(context, SDKDemoActivity::class.java)
+            intent.putExtra("from_main", true)
+            startActivity(intent)
+            activity.overridePendingTransition(R.anim.right_in, R.anim.left_out)
+        }
     }
 
     private fun configRefresh() {

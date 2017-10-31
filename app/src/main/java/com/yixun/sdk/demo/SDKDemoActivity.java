@@ -20,7 +20,6 @@ import com.idealsee.sdk.util.ISARTipsUtil;
 import com.idealsee.sdk.util.Logger;
 import com.unity3d.player.UnityPlayer;
 
-import java.io.File;
 import java.util.List;
 
 public class SDKDemoActivity extends ISARSDKActivity {
@@ -95,6 +94,8 @@ public class SDKDemoActivity extends ISARSDKActivity {
             case ISAR_AR_START_AR:
                 Logger.LOGD(TAG + " idealThemeStatus start ar theme");
                 break;
+            default:
+                break;
         }
 
     }
@@ -149,7 +150,7 @@ public class SDKDemoActivity extends ISARSDKActivity {
             @Override
             public void run() {
                 if (errorCode == 0) {
-                    ISARTipsUtil.makeToast(mContext, "授权成功", Toast.LENGTH_SHORT);
+//                    ISARTipsUtil.makeToast(mContext, "授权成功", Toast.LENGTH_SHORT);
                 } else {
                     ISARTipsUtil.makeToast(mContext, "ideal key authenticate failed " + errorCode, Toast.LENGTH_SHORT);
                 }

@@ -1,11 +1,13 @@
 package com.yixun.sdk.demo.ui.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.yixun.sdk.demo.R
+import com.yixun.sdk.demo.SDKDemoActivity
 import com.yixun.sdk.demo.databinding.FragmentHomeBinding
 import com.youth.banner.loader.ImageLoaderInterface
 
@@ -17,6 +19,7 @@ class HomeFragment : BaseBingingFragment<FragmentHomeBinding>() {
 
     override fun onCreateView(mBinding: FragmentHomeBinding, savedInstanceState: Bundle?) {
         bindFeeds(mBinding)
+        bindEvent()
     }
 
     override fun getLayoutId(): Int = R.layout.fragment_home
@@ -56,6 +59,15 @@ class HomeFragment : BaseBingingFragment<FragmentHomeBinding>() {
         mBinding.homeBannerFeed.setOnBannerListener {
             //                Log.d("banner", " click : " + it)
 //                binding.root.context.startActivity(Intent(binding.root.context, MyProductsActivity::class.java))
+        }
+    }
+
+    private fun bindEvent() {
+        mBinding.ivAR.setOnClickListener {
+            val intent = Intent(context, SDKDemoActivity::class.java)
+            intent.putExtra("from_main", true)
+            startActivity(intent)
+            activity.overridePendingTransition(R.anim.right_in, R.anim.left_out)
         }
     }
 }

@@ -7,7 +7,7 @@ public class Logger {
     public static final int LOG_LEVEL_TEST = 1;
     public static final int LOG_LEVEL_RELEASE = 2;
 
-    private static int logLevel = LOG_LEVEL_RELEASE;
+    private static int logLevel = LOG_LEVEL_TEST;
     private static int logUrlLevel = LOG_LEVEL_RELEASE;
     private static String tag = "Idealsee";
 

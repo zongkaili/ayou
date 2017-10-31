@@ -100,18 +100,20 @@
                             android:text='使用周期: 3个月'
                             android:textColor="@color/text_gray"
                             android:layout_marginTop="8dp"
-                            android:textSize="@dimen/text_size_small" />
+                            android:textSize="@dimen/text_size_small"
+                            android:padding="5dp"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="5dp">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text='使用区域：山东淄博市'
                             android:textColor="@color/text_gray"
-                            android:layout_marginTop="8dp"
                             android:textSize="@dimen/text_size_small" />
 
                         <TextView
@@ -127,7 +129,7 @@
                             android:paddingTop="5dp"
                             android:text="去付款"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_small"/>
+                            android:textSize="@dimen/text_size_small" />
                     </RelativeLayout>
 
                 </LinearLayout>

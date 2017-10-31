@@ -19,12 +19,51 @@ xmlns:tools="http://schemas.android.com/tools">
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
                     android:src="@drawable/pic_scenic_detail2"/>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:background="@color/color_white">
+
+                    <Button
+                        android:id="@+id/btnAr"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_btn_selecter_blue_solid"
+                        android:text="免费体验AR导游服务"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"/>
+
+                    <Button
+                        android:id="@+id/btnBuy"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="35dp"
+                        android:background="@drawable/bg_btn_selecter_blue_solid"
+                        android:text="立即购买"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
 

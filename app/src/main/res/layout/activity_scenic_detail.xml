@@ -20,7 +20,7 @@
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_back_gray"
+                app:navigationIcon="@drawable/ic_back_blue"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/AppTheme.AppBarOverlay">
 

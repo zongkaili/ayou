@@ -1,5 +1,6 @@
 package com.yixun.sdk.demo.list;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +54,7 @@ public class MainFragment extends Fragment implements OnClickListener {
     private RecognizeTimeListAdapter mRecTimeRVAdapter;
     private List<String> mRecTimeList;
 
+    private Toolbar mToolbar;
     private TextView mStartScan;
     private TextView mDiscoverTv;
     private TextView mPrePageTv, mNextPageTv;
@@ -76,6 +79,7 @@ public class MainFragment extends Fragment implements OnClickListener {
     private boolean mIsSupportRotate = false;
     private boolean mIsSupportGyroscope = false;
 
+    @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -96,6 +100,8 @@ public class MainFragment extends Fragment implements OnClickListener {
         Configuration config = getResources().getConfiguration();
         mView = inflater.inflate(R.layout.frag_main, null);
         initWidget(mView);
+        initToorBar();
+        handleClickScan();
         return mView;
     }
 
@@ -105,6 +111,7 @@ public class MainFragment extends Fragment implements OnClickListener {
     }
 
     private void initWidget(View rootView) {
+        mToolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         mStartScan = (TextView) rootView.findViewById(R.id.start_scan);
         mDiscoverTv = (TextView) rootView.findViewById(R.id.tv_discover);
         mPrePageTv = (TextView) rootView.findViewById(R.id.tv_pre);
@@ -123,6 +130,16 @@ public class MainFragment extends Fragment implements OnClickListener {
         initObjectOperator(rootView);
         initMenu(rootView);
         initRecognizeTimeList();
+    }
+
+    private void initToorBar() {
+        mToolbar.setNavigationOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handleClickScan();
+                getActivity().onBackPressed();
+            }
+        });
     }
 
     private void initToastOperator(View rootView) {
@@ -354,32 +371,41 @@ public class MainFragment extends Fragment implements OnClickListener {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        Logger.LOGD(TAG + " onDestroyView : ");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Logger.LOGD(TAG + " onDestroy : ");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+        Logger.LOGD(TAG + " onDetach : ");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
+        Logger.LOGD(TAG + " onPause : ");
+        if (mIsScanning) {
+            ((SDKDemoActivity) getActivity()).doStopARTheme();
+            showDefaultMode();
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        Logger.LOGD(TAG + " onResume : ");
     }
 
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
+        Logger.LOGD(TAG + " hidden : " + hidden);
     }
 
     @Override
@@ -389,16 +415,7 @@ public class MainFragment extends Fragment implements OnClickListener {
         }
         switch (v.getId()) {
             case R.id.start_scan:
-                mIsScanning = !mIsScanning;
-                if (mIsScanning) {
-                    ((SDKDemoActivity) getActivity()).doStartScanARTheme();
-                    showARMode();
-                } else {
-                    ((SDKDemoActivity) getActivity()).doStopARTheme();
-                    showDefaultMode();
-                    if (mIsScanning)
-                        addRecognizeTimeLine();
-                }
+                handleClickScan();
                 break;
             case R.id.tv_discover:
                 ((SDKDemoActivity) getActivity()).doDiscoverPage();
@@ -414,6 +431,20 @@ public class MainFragment extends Fragment implements OnClickListener {
         }
     }
 
+    private void handleClickScan() {
+        mIsScanning = !mIsScanning;
+        if (mIsScanning) {
+            ((SDKDemoActivity) getActivity()).doStartScanARTheme();
+            showARMode();
+        } else {
+            ((SDKDemoActivity) getActivity()).doStopARTheme();
+            showDefaultMode();
+            if (mIsScanning) {
+                addRecognizeTimeLine();
+            }
+        }
+    }
+
     public void showARMode() {
         mIsScanning = true;
         mStartScan.setText(R.string.stop_scan);
@@ -424,7 +455,7 @@ public class MainFragment extends Fragment implements OnClickListener {
         resetView();
         mIsScanning = false;
         mStartScan.setText(R.string.start_scan);
-        mDiscoverTv.setVisibility(View.VISIBLE);
+        mDiscoverTv.setVisibility(View.GONE);
     }
 
     public boolean getScanningState() {

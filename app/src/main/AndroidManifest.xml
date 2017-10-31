@@ -29,10 +29,10 @@
         android:theme="@style/MyAppTheme">
         <meta-data
             android:name="com.yixun.isarsdk.app_id"
-            android:value="5716fa795372a100055c1941" /><!--58be22a2b5eb0f00053d566b-->
+            android:value="59f67ec4cda1be0005424964" /><!--5716fa795372a100055c1941-->
         <meta-data
             android:name="com.yixun.isarsdk.app_key"
-            android:value="cd22ac4c357b9b1d0cacfa542f3c5638" /><!--8b8e01b13d4f5dab6a84d82a727a8dd0-->
+            android:value="ab65f0982fbe821d25a0a6122ed8304a" /><!--cd22ac4c357b9b1d0cacfa542f3c5638-->
 
         <activity
             android:name=".ui.activity.StartActivity"
@@ -42,6 +42,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".permission.PermissionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ui.activity.introduction.IntroductionActivity"
             android:theme="@style/AppTheme.NoActionBar"

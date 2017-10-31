@@ -1,8 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'realm-android'
-apply plugin: 'me.tatarka.retrolambda'
 android {
     signingConfigs {
         debug {
@@ -70,13 +68,12 @@ kapt {
 }
 
 dependencies {
+    def dependencies = rootProject.ext.dependencies
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':idealsdk')
 //    compile(name: 'idealsdk', ext: 'aar')
-    compile project(':jiaozivideoplayer')
-    //    compile(name: 'sdk_release', ext: 'aar')
-    def dependencies = rootProject.ext.dependencies
+//    compile project(':jiaozivideoplayer')
 //    implementation dependencies["appcompat-v7"]
 //    implementation dependencies["design"]
     implementation dependencies["fragmentation"]
@@ -98,5 +95,5 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
     annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
 
-//    compile 'cn.jzvd:jiaozivideoplayer:6.1.0_preview'
+    compile 'cn.jzvd:jiaozivideoplayer:6.1.1'
 }

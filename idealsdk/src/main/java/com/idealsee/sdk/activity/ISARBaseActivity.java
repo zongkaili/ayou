@@ -72,8 +72,8 @@ public class ISARBaseActivity extends Activity {
             mPackageName = pi.packageName;
             ApplicationInfo aI = pm.getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
             Bundle bundle = aI.metaData;
-            mAppKey = bundle.getString("com.idealsee.isarsdk.app_key");
-            mAppId = bundle.getString("com.idealsee.isarsdk.app_id");
+            mAppKey = bundle.getString("com.yixun.isarsdk.app_key");
+            mAppId = bundle.getString("com.yixun.isarsdk.app_key");
             Logger.LOGD(TAG + " IdealseeKey = " + bundle.getString("app-key") + ",packageName=" + getPackageName()
                     + ",pi.packageName=" + pi.packageName + ",pi.versionName=" + pi.versionName + ",versionCode="
                     + pi.versionCode);

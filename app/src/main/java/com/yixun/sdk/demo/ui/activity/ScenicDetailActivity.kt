@@ -1,8 +1,8 @@
 package com.yixun.sdk.demo.ui.activity
 
 import android.app.Activity
-import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.support.v4.app.Fragment
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
@@ -13,7 +13,9 @@ import com.yixun.sdk.demo.databinding.ActivityScenicDetailBinding
 import com.yixun.sdk.demo.ui.fragment.MyFragmentPagerAdapter
 import com.yixun.sdk.demo.ui.fragment.ScenicDetailChildTwoFragment
 import cn.jzvd.JZVideoPlayerStandard
-import com.bumptech.glide.Glide
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.InputStream
 
 
 /**
@@ -65,8 +67,31 @@ class ScenicDetailActivity : BaseBindingActivity<ActivityScenicDetailBinding>() 
     }
 
     private fun initVideoPlayer() {
-        binding.jzVideo.setUp("http://jzvd.nathen.cn/df6096e7878541cbbea3f7298683fbed/ef76450342914427beafe9368a4e0397-5287d2089db37e62345123a1be272f8b.mp4", JZVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "title")
-        binding.jzVideo.thumbImageView.setImageURI(Uri.parse("http://jzvd-pic.nathen.cn/jzvd-pic/ccd86ca1-66c7-4331-9450-a3b7f765424a.png"))
+        copyAssetVideoToLocalPath()
+        binding.jzVideo.setUp(Environment.getExternalStorageDirectory().getAbsolutePath() + "/DCIM/Camera/temple_of_heaven.mp4"
+        , JZVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "北京天坛宣传片")
+
+//        binding.jzVideo.thumbImageView.setImageURI(Uri.parse("http://jzvd-pic.nathen.cn/jzvd-pic/ccd86ca1-66c7-4331-9450-a3b7f765424a.png"))
+    }
+
+    private fun copyAssetVideoToLocalPath() {
+        try {
+            val myInput: InputStream = this.assets.open("temple_of_heaven.mp4")
+            val myOutput = FileOutputStream(Environment.getExternalStorageDirectory().absolutePath + "/DCIM/Camera/temple_of_heaven.mp4")
+            val buffer = ByteArray(1024)
+            var length = myInput.read(buffer)
+            while (length > 0) {
+                myOutput.write(buffer, 0, length)
+                length = myInput.read(buffer)
+            }
+
+            myOutput.flush()
+            myInput.close()
+            myOutput.close()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+
     }
 
     override fun onBackPressed() {
